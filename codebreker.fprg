@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ruvey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-11 08:59:12 "/>
+        <attribute name="created" value="cnV2ZXk7TEFQVE9QLVJVVkVZREE7MjAyMy0wOS0yODsiMTI6MjY6MDIgIjsyODE4"/>
+        <attribute name="edited" value="cnV2ZXk7TEFQVE9QLVJVVkVZREE7MjAyMy0xMC0xMTsiMDg6NTk6MTIgIjszMDsyOTcy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="rood" type="String" array="False" size=""/>
+            <assign variable="rood" expression="&quot;rood&quot;"/>
+            <declare name="paars" type="String" array="False" size=""/>
+            <assign variable="paars" expression="&quot;paars&quot;"/>
+            <declare name="blauw" type="String" array="False" size=""/>
+            <assign variable="blauw" expression="&quot;blauw&quot;"/>
+            <declare name="geel" type="String" array="False" size=""/>
+            <assign variable="geel" expression="&quot;geel&quot;"/>
+            <declare name="groen" type="String" array="False" size=""/>
+            <assign variable="groen" expression="&quot;groen&quot;"/>
+            <declare name="oranje" type="String" array="False" size=""/>
+            <assign variable="oranje" expression="&quot;oranje&quot;"/>
+            <declare name="CM1" type="String" array="False" size=""/>
+            <assign variable="CM1" expression="rood"/>
+            <declare name="CM2" type="String" array="False" size=""/>
+            <assign variable="CM2" expression="geel"/>
+            <declare name="CM3" type="String" array="False" size=""/>
+            <assign variable="CM3" expression="paars"/>
+            <declare name="CM4" type="String" array="False" size=""/>
+            <assign variable="CM4" expression="blauw"/>
+            <declare name="CB1" type="String" array="False" size=""/>
+            <declare name="CB2" type="String" array="False" size=""/>
+            <declare name="CB3" type="String" array="False" size=""/>
+            <declare name="CB4" type="String" array="False" size=""/>
+            <declare name="CV1" type="String" array="False" size=""/>
+            <declare name="CV2" type="String" array="False" size=""/>
+            <declare name="CV3" type="String" array="False" size=""/>
+            <declare name="CV4" type="String" array="False" size=""/>
+            <declare name="poging" type="Integer" array="False" size=""/>
+            <assign variable="poging" expression="1"/>
+            <output expression="&quot;Het spel begint nu&quot;" newline="True"/>
+            <do expression="poging &lt;=10">
+                <input variable="CB1"/>
+                <if expression="CB1 = CM1">
+                    <then>
+                        <assign variable="CV1" expression="&quot;zwart pin&quot;"/>
+                    </then>
+                    <else>
+                        <if expression="CB1=CM2">
+                            <then>
+                                <assign variable="CV1" expression="&quot;wit pin&quot;"/>
+                            </then>
+                            <else>
+                                <if expression="CB1=CM3">
+                                    <then>
+                                        <assign variable="CV1" expression="&quot;wit pin&quot;"/>
+                                    </then>
+                                    <else>
+                                        <if expression="CB1=CM4">
+                                            <then>
+                                                <assign variable="CV1" expression="&quot;wit pin&quot;"/>
+                                            </then>
+                                            <else>
+                                                <assign variable="CV1" expression="&quot;geen pin&quot;"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <input variable="CB2"/>
+                <if expression="CB2 = CM2">
+                    <then>
+                        <assign variable="CV2" expression="&quot;zwart pin&quot;"/>
+                    </then>
+                    <else>
+                        <if expression="CB2=CM1">
+                            <then>
+                                <assign variable="CV2" expression="&quot;wit pin&quot;"/>
+                            </then>
+                            <else>
+                                <if expression="CB2=CM3">
+                                    <then>
+                                        <assign variable="CV2" expression="&quot;wit pin&quot;"/>
+                                    </then>
+                                    <else>
+                                        <if expression="CB2=CM4">
+                                            <then>
+                                                <assign variable="CV2" expression="&quot;wit pin&quot;"/>
+                                            </then>
+                                            <else>
+                                                <assign variable="CV2" expression="&quot;geen pin&quot;"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <input variable="CB3"/>
+                <if expression="CB3 = CM3">
+                    <then>
+                        <assign variable="CV3" expression="&quot;zwart pin&quot;"/>
+                    </then>
+                    <else>
+                        <if expression="CB3=CM1">
+                            <then>
+                                <assign variable="CV3" expression="&quot;wit pin&quot;"/>
+                            </then>
+                            <else>
+                                <if expression="CB3=CM2">
+                                    <then>
+                                        <assign variable="CV3" expression="&quot;wit pin&quot;"/>
+                                    </then>
+                                    <else>
+                                        <if expression="CB3=CM4">
+                                            <then>
+                                                <assign variable="CV3" expression="&quot;wit pin&quot;"/>
+                                            </then>
+                                            <else>
+                                                <assign variable="CV3" expression="&quot;geen pin&quot;"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <input variable="CB4"/>
+                <if expression="CB4 = CM4">
+                    <then>
+                        <assign variable="CV4" expression="&quot;zwart pin&quot;"/>
+                    </then>
+                    <else>
+                        <if expression="CB4=CM1">
+                            <then>
+                                <assign variable="CV4" expression="&quot;wit pin&quot;"/>
+                            </then>
+                            <else>
+                                <if expression="CB4=CM2">
+                                    <then>
+                                        <assign variable="CV4" expression="&quot;wit pin&quot;"/>
+                                    </then>
+                                    <else>
+                                        <if expression="CB4=CM3">
+                                            <then>
+                                                <assign variable="CV4" expression="&quot;wit pin&quot;"/>
+                                            </then>
+                                            <else>
+                                                <assign variable="CV4" expression="&quot;geen pin&quot;"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="CV1" newline="True"/>
+                <output expression="CV2" newline="True"/>
+                <output expression="CV3" newline="True"/>
+                <output expression="CV4" newline="True"/>
+                <if expression="CV1 = &quot;zwart pin&quot;">
+                    <then>
+                        <if expression="CV2 = &quot;zwart pin&quot;">
+                            <then>
+                                <if expression="CV3 = &quot;zwart pin&quot;">
+                                    <then>
+                                        <if expression="CV4 = &quot;zwart pin&quot;">
+                                            <then>
+                                                <assign variable="poging" expression="11"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </then>
+                            <else/>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+            </do>
+        </body>
+    </function>
+</flowgorithm>
