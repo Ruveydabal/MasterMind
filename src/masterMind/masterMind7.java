@@ -1,27 +1,14 @@
 package masterMind;
 
-import java.util.Random;
-import java.util.Scanner;
-
 public class masterMind7
 {
     public static void main(String args[])
     {
-
-	Random rnd = new Random();
-
-	String[] kleuren =
-	{ "rood", "paars", "geel", "groen", "oranje", "blauw" };
-	Scanner sc = new Scanner(System.in);
+	vergelijken check = new vergelijken();
 
 	String[] controleVak = new String[4];
-	String[] codeMaker = new String[4];
+	String[] codeMaker = check.codeAanMaken();
 	String[] codeBrekerArray = new String[4];
-
-	for (int codeMakerCode = 0; codeMakerCode < 4; codeMakerCode++)
-	{
-	    codeMaker[codeMakerCode] = kleuren[rnd.nextInt(kleuren.length)];
-	}
 
 	int poging = 1;
 
@@ -31,23 +18,18 @@ public class masterMind7
 	    System.out.println("zet je code er in ");
 	    int kleur = 0;
 
-	    System.out.println("kleur " + (kleur + 1));
-	    codeBrekerArray[kleur] = sc.nextLine();
-	    kleur++;
-	    System.out.println("kleur " + (kleur + 1));
-	    codeBrekerArray[kleur] = sc.nextLine();
-	    kleur++;
-	    System.out.println("kleur " + (kleur + 1));
-	    codeBrekerArray[kleur] = sc.nextLine();
-	    kleur++;
-	    System.out.println("kleur " + (kleur + 1));
-	    codeBrekerArray[kleur] = sc.nextLine();
-	    kleur++;
+	    // hier zet je de code er in
+	    for (int i = 0; i < 4; i++)
+	    {
+		System.out.println("kleur " + (kleur + 1));
+		codeBrekerArray[kleur] = check.vraagKeuzpin();
+		kleur++;
+	    }
 
 	    // checken voor zwart pin, wit pin of geen pin
-	    vergelijken check = new vergelijken();
 	    controleVak = check.controleren(codeMaker, codeBrekerArray);
 
+	    // zegt of het zwart pin, wit pin of geen pin is
 	    int i = 0;
 
 	    for (int cijfers = 1; cijfers < 5; cijfers++)
@@ -56,6 +38,7 @@ public class masterMind7
 		i++;
 	    }
 
+	    // print code uit als je het niet geraden hebt
 	    if (poging == 10)
 	    {
 
@@ -67,12 +50,13 @@ public class masterMind7
 	    }
 
 	    poging = poging + 1;
+	    check.winVerlies();
 
 	    // controle voor win of verlies
-	    if (controleVak[0].equals("zwart pin") && controleVak[1].equals("zwart pin") && controleVak[2].equals("zwart pin") && controleVak[3].equals("zwart pin"))
-	    {
-		poging = 12;
-	    }
+//	    if (controleVak[0].equals("zwart pin") && controleVak[1].equals("zwart pin") && controleVak[2].equals("zwart pin") && controleVak[3].equals("zwart pin"))
+//	    {
+//		poging = 12;
+//	    } // boolean? maken controleVak.length in functie
 
 	}
 
@@ -84,8 +68,6 @@ public class masterMind7
 	{
 	    System.out.println("je hebt helaas niet gewonnen :( ");
 	}
-
-	sc.close();
 
     }
 
