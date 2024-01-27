@@ -48,21 +48,15 @@ public class masterMind7
 		}
 
 	    }
-
+	    // check win of verlies
 	    poging = poging + 1;
-	    check.winVerlies();
-
-	    // controle voor win of verlies
-//	    if (controleVak[0].equals("zwart pin") && controleVak[1].equals("zwart pin") && controleVak[2].equals("zwart pin") && controleVak[3].equals("zwart pin"))
-//	    {
-//		poging = 12;
-//	    } // boolean? maken controleVak.length in functie
+	    check.winVerlies(controleVak);
 
 	}
 
-	while (poging <= 10);
+	while (poging <= 10 && check.eindResultaat == false);
 
-	if (poging == 12)
+	if (check.eindResultaat == true)
 	    System.out.println("je hebt gewonnen! :) ");
 	else
 	{
