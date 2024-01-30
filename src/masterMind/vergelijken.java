@@ -121,10 +121,10 @@ public class vergelijken
 	    codeMaker[codeMakerCode] = kleuren[rnd.nextInt(kleuren.length)];
 	}
 
-//	for (String string : codeMaker)
-//	{
-//	    System.out.println(string);
-//	}
+	for (String string : codeMaker)
+	{
+	    System.out.println(string);
+	}
 	return codeMaker;
     }
 
